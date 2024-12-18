@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "chrmarti.regex",
+    "styled-components.vscode-styled-components",
+    "wix.vscode-import-cost",
+    "christian-kohler.path-intellisense"
+  ]
+}
