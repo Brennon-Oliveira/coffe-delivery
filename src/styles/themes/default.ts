@@ -37,5 +37,5 @@ export const defaultTheme = {
 	"button-g": "700 0.875rem/130% 'Roboto', sans-serif",
 	"button-m": "400 0.75rem/130% 'Roboto', sans-serif",
 
-	"max-width": "70rem",
+	"max-width": "85rem",
 } as const;

@@ -1,6 +1,13 @@
 import { Minus, Plus } from "phosphor-react";
 import { QuantityInputContainer } from "./styles";
-import { createContext, type ReactNode, useContext, useState } from "react";
+import {
+	createContext,
+	type ReactNode,
+	useCallback,
+	useContext,
+	useEffect,
+	useState,
+} from "react";
 
 interface QuantityInputContextValue {
 	quantity: number;
@@ -15,12 +22,14 @@ export const QuantityInputContext = createContext({
 
 interface QuantityInputProviderProps {
 	children: ReactNode;
+	initialValue?: number;
 }
 
 export function QuantityInputProvider({
 	children,
+	initialValue,
 }: QuantityInputProviderProps) {
-	const [quantity, setQuantity] = useState(1);
+	const [quantity, setQuantity] = useState(initialValue ?? 1);
 
 	function increment() {
 		setQuantity((state) => state + 1);
@@ -43,20 +52,24 @@ export function QuantityInputProvider({
 	);
 }
 
-export function QuantityInput() {
+interface QuantityInputProps {
+	defaultQuantity: number;
+}
+
+export function QuantityInput({ defaultQuantity }: QuantityInputProps) {
 	const { quantity, decrement, increment, change } =
 		useContext(QuantityInputContext);
 
 	function handleIncrement() {
-		decrement();
-	}
-
-	function handleDecrement() {
 		increment();
 	}
 
+	function handleDecrement() {
+		decrement();
+	}
+
 	return (
-		<QuantityInputContainer inputLength={quantity.toString().length}>
+		<QuantityInputContainer $inputLength={quantity.toString().length}>
 			<button type="button" onClick={handleDecrement}>
 				<Minus weight="bold" size={".875rem"} />
 			</button>

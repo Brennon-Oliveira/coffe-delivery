@@ -23,25 +23,25 @@ export function Home() {
 							</p>
 						</div>
 						<div>
-							<BannerItem variant="orange">
+							<BannerItem $variant="orange">
 								<span>
 									<ShoppingCart weight="fill" />
 								</span>
 								Compra simples e segura
 							</BannerItem>
-							<BannerItem variant="gray">
+							<BannerItem $variant="gray">
 								<span>
 									<Package weight="fill" />
 								</span>
 								Embalagem mantém o café intacto
 							</BannerItem>
-							<BannerItem variant="yellow">
+							<BannerItem $variant="yellow">
 								<span>
 									<Timer weight="fill" />
 								</span>
 								Entrega rápida e rastreada
 							</BannerItem>
-							<BannerItem variant="purple">
+							<BannerItem $variant="purple">
 								<span>
 									<Coffee weight="fill" />
 								</span>

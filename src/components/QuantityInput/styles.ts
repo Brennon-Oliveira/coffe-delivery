@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface QuantityInputContainerProps {
-	inputLength: number;
+	$inputLength: number;
 }
 
 export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
@@ -9,7 +9,7 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
   background-color: ${(props) => props.theme["base-button"]};
   border-radius: 6px;
   width: fit-content;
-  padding: .5rem;
+  padding: .75rem;
   gap: .25rem;
 
   &:has(input:focus), &:has(button:focus){
@@ -35,6 +35,6 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
     font: ${(props) => props.theme["text-m"]};
     -moz-appearance: textfield;
     border: none;
-    width: ${(props) => (props.inputLength || 1) * 9}px;
+    width: ${(props) => (props.$inputLength || 1) * 9}px;
   }
 `;

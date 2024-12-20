@@ -24,7 +24,7 @@ export const BannerExternalContainer = styled.div`
     
     display: block;
     background-image: url(${bannerBackground});
-    background-size:cover;
+    background-size:contain;
     width: 100%;
     height: 100%;
 
@@ -83,7 +83,7 @@ export const BannerContent = styled.div`
 type BannerItemVariants = "orange" | "yellow" | "gray" | "purple";
 
 interface BannerItemsProps {
-	variant: BannerItemVariants;
+	$variant: BannerItemVariants;
 }
 
 const colorFromVariant: Record<BannerItemVariants, keyof typeof defaultTheme> =
@@ -109,7 +109,7 @@ export const BannerItem = styled.p<BannerItemsProps>`
     align-items: center;
     width: 2rem;
     height: 2rem;
-    background-color: ${(props) => props.theme[colorFromVariant[props.variant]]};
+    background-color: ${(props) => props.theme[colorFromVariant[props.$variant]]};
     color: ${(props) => props.theme.white};
     font-size: 1rem;
     border-radius: 100%;

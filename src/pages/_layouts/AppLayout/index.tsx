@@ -7,10 +7,13 @@ import {
 } from "./styles";
 import logo from "@assets/images/logo.svg";
 import { MapPin, ShoppingCart } from "phosphor-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "@/contexts/AppContext";
 
 export function AppLayout() {
-	const [cartItems, setCartItems] = useState(4 as number | null);
+	const { products } = useContext(AppContext);
+
+	const cartItems = products.length;
 
 	return (
 		<AppLayoutContainer>
@@ -23,9 +26,9 @@ export function AppLayout() {
 					<LocationButton>
 						<MapPin weight="fill" size={"1.375rem"} /> Ponta Grossa, PR
 					</LocationButton>
-					<CartButton>
+					<CartButton to="/checkout">
 						<ShoppingCart weight="fill" size={"1.375rem"} />
-						{cartItems && <span>{cartItems}</span>}
+						{cartItems !== 0 && <span>{cartItems}</span>}
 					</CartButton>
 				</div>
 			</AppHeader>

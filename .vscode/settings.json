@@ -1,0 +1,20 @@
+{
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome",
+    "editor.formatOnSave": true
+  },
+  "path-intellisense.mappings": {
+    "@assets": "${workspaceRoot}/src/assets",
+    "@styles": "${workspaceRoot}/src/styles",
+    "@": "${workspaceRoot}/src",
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative"
+} 

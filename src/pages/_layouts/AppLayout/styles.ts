@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import { Link } from "react-router-dom";
+import styled, { css } from "styled-components";
 
 export const AppLayoutContainer = styled.div`
   width: 100%;
@@ -24,7 +25,7 @@ export const AppHeader = styled.header`
   }
 `;
 
-const BaseButton = styled.button`
+const BaseButton = css`
   border: none;
   background-color: transparent;
   font: ${(props) => props.theme["text-s"]};
@@ -41,13 +42,14 @@ const BaseButton = styled.button`
   }
 `;
 
-export const LocationButton = styled(BaseButton)`
+export const LocationButton = styled.button`
+  ${BaseButton}
   background-color: ${(props) => props.theme["purple-300"]};
   color: ${(props) => props.theme["purple-700"]};
-
 `;
 
-export const CartButton = styled(BaseButton)`
+export const CartButton = styled(Link)`
+  ${BaseButton}
   background-color: ${(props) => props.theme["yellow-300"]};
   color: ${(props) => props.theme["yellow-700"]};
   position: relative;

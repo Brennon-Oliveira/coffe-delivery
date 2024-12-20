@@ -14,6 +14,7 @@ import arabe from "@assets/images/coffees/Image-12.png";
 import irlandes from "@assets/images/coffees/Image-13.png";
 
 interface OurCoffesMock {
+	id: number;
 	tags: string[];
 	title: string;
 	description: string;
@@ -23,6 +24,7 @@ interface OurCoffesMock {
 
 export const ourCoffeesMock: OurCoffesMock[] = [
 	{
+		id: 0,
 		title: "Expresso Tradicional",
 		description: "O tradicional café feito com água quente e grãos moídos",
 		tags: ["tradicional"],
@@ -30,6 +32,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: expressoTradicional,
 	},
 	{
+		id: 1,
 		title: "Expresso Americano",
 		description: "Expresso diluído, menos intenso que o tradicional",
 		tags: ["tradicional"],
@@ -37,6 +40,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: expressoAmericano,
 	},
 	{
+		id: 2,
 		title: "Expresso Cremoso",
 		description: "Café expresso tradicional com espuma cremosa",
 		tags: ["tradicional"],
@@ -44,6 +48,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: expressoCremoso,
 	},
 	{
+		id: 3,
 		title: "Expresso Gelado",
 		description: "Bebida preparada com café expresso e cubos de gelo",
 		tags: ["tradicional", "gelado"],
@@ -51,6 +56,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: expressoGelado,
 	},
 	{
+		id: 4,
 		title: "Café com Leite",
 		description: "Meio a meio de expresso tradicional com leite vaporizado",
 		tags: ["tradicional", "com leite"],
@@ -58,6 +64,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: cafeComLeite,
 	},
 	{
+		id: 5,
 		title: "Latte",
 		description:
 			"Uma dose de café expresso com o dobro de leite e espuma cremosa",
@@ -66,6 +73,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: latte,
 	},
 	{
+		id: 6,
 		title: "Capuccino",
 		description:
 			"Bebida com canela feita de doses iguais de café, leite e espuma",
@@ -74,6 +82,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: capuccino,
 	},
 	{
+		id: 7,
 		title: "Macchiato",
 		description:
 			"Café expresso misturado com um pouco de leite quente e espuma",
@@ -82,6 +91,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: macchiato,
 	},
 	{
+		id: 8,
 		title: "Mocaccino",
 		description: "Café expresso com calda de chocolate, pouco leite e espuma",
 		tags: ["tradicional", "com leite"],
@@ -89,6 +99,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: mocaccino,
 	},
 	{
+		id: 9,
 		title: "Chocolate Quente",
 		description: "Bebida feita com chocolate dissolvido no leite quente e café",
 		tags: ["especial", "com leite"],
@@ -96,6 +107,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: chocolateQuente,
 	},
 	{
+		id: 10,
 		title: "Cubano",
 		description:
 			"Drink gelado de café expresso com rum, creme de leite e hortelã",
@@ -104,6 +116,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: cubano,
 	},
 	{
+		id: 11,
 		title: "Havaiano",
 		description: "Bebida adocicada preparada com café e leite de coco",
 		tags: ["especial"],
@@ -111,6 +124,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: havaiano,
 	},
 	{
+		id: 12,
 		title: "Árabe",
 		description: "Bebida preparada com grãos de café árabe e especiarias",
 		tags: ["especial"],
@@ -118,6 +132,7 @@ export const ourCoffeesMock: OurCoffesMock[] = [
 		image: arabe,
 	},
 	{
+		id: 13,
 		title: "Irlandês",
 		description: "Bebida a base de café, uísque irlandês, açúcar e chantilly",
 		tags: ["especial", "alcoólico"],
